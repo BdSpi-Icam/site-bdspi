@@ -4,7 +4,7 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #373737;
 }
 
 /* Custom default button */
@@ -23,9 +23,9 @@ a:hover {
 }
 html,
 body {
-  height: 100%;
+  height: auto;
   background-color: #F0F0E8;
-  min-width: 1000px;
+  min-width: 900px;
 }
 body {
   color: #373737;
@@ -53,7 +53,7 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 30px;
+  padding: 15px 0 5px 0;
 }
 
 /* -------------------- Header -------------------- */
@@ -92,11 +92,14 @@ body {
 /* -------------------- Cover -------------------- */
 .cover {
   padding: 0 20px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
+}
+.lead {
+    font-size: 17px;
 }
 
 /* -------------------- Footer -------------------- */

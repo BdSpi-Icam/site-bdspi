@@ -1,3 +1,20 @@
+<?php 
+
+function getEvangileDuJourContent($type,$date=null,$lang="FR",$content="GSP"){
+  if (empty($date) || !is_numeric($date)) {
+    $date = date('Ymd');
+  }
+  $url = "http://feed.evangelizo.org/v2/reader.php?date=".$date."&type=".$type."&lang=".$lang."&content=GSP";
+  $h = fopen($url,"r");
+  $str = '';
+  while (!feof($h)) {
+    $str .= fgets($h);
+  }
+  return $str;
+}
+
+?>
+
 <html lang="fr"><head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -40,7 +57,15 @@
             <h1 class="cover-heading">Maintenance du site.</h1>
             <p class="lead">
               Le site du BdSpi est actuellement en création, Il vous sera bientôt présenté.<br>
-              Votre équipe du BdSpi de l'Icam Lille
+              Votre équipe du BdSpi de l'Icam Lille, pour tous les BdSpi Icam
+            </p>
+            <h3>Saint du jour :</h3>
+            <p>
+              <?= getEvangileDuJourContent('saint') ?>
+            </p>
+            <h3>Evangile du jour <small>(<?= getEvangileDuJourContent('liturgic_t') ?>)</small></h3>
+            <p>
+              <?= getEvangileDuJourContent('reading_lt') ?>
             </p>
           </div>
 
