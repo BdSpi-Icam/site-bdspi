@@ -63,16 +63,19 @@ function getEvangileDuJourContent($type,$date=null,$lang="FR",$content="GSP"){
             <p>
               <?= getEvangileDuJourContent('saint') ?>
             </p>
-            <h3>Evangile du jour <small>(<?= getEvangileDuJourContent('liturgic_t') ?>)</small></h3>
-            <p>
-              <?= getEvangileDuJourContent('reading_lt') ?>
-            </p>
           </div>
 
           <div class="masthead clearfix">
             <div class="inner clearfix text-center">
               <img src="icam_at_rn_cge_paris_2014.jpg" alt="L'Icam à la RN CGE de Paris 2014" title="L'Icam à la RN CGE de Paris 2014 - Devant Montmartre" height="300">
             </div>
+          </div>
+
+          <div class="inner cover">
+            <h3>Evangile du jour <small>(<?= getEvangileDuJourContent('liturgic_t') ?>)</small></h3>
+            <p>
+              <?= getEvangileDuJourContent('all') ?>
+            </p>
           </div>
         </div>
       </div>
