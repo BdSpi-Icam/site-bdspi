@@ -1,0 +1,1 @@
+jQuery('a.zoombox').zoombox();

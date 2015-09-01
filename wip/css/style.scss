@@ -1,0 +1,230 @@
+@import "compass";
+
+/* Couleurs Logo CICL */
+$bleuPale: #71a7cb;
+$bleu: #1082ce;
+$bleuBorder: #357ebd;
+$vert: #009b34;
+$rougeFonce: #a6191b;
+$jaune: #fbc30e;
+$orange:#f05c16;
+$rouge:#bb111e;
+
+*{@include box-sizing(border-box);}
+
+/**********************************
+************HEADER*****************
+**********************************/
+
+.cover_pic{
+    @include background-size(cover);
+    color:#fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    height: 600px;
+}
+.entreeCouvent{ background:url(../img/casa.jpg) no-repeat top center fixed;}
+.viewCouvent{ background:url(../img/view_couvent.jpg) no-repeat top center fixed;}
+.aupieddeluniversite{ background:url(../img/aupieddeluniversite.jpg) no-repeat top center fixed;}
+.leglise{ background:url(../img/leglise.jpg) no-repeat top center fixed;}
+.rncge2014{ background:url(../img/icamRN-CGE2014.jpg) no-repeat top center fixed;}
+.foiEtExperiment{ background:url(../img/foiEtExperiment.jpg) no-repeat top center fixed;}
+.equipe2015{ background:url(../img/equipe2015.jpg) no-repeat top center fixed;}
+.jmj2011{ background:url(../img/jmj2011.jpg) no-repeat top center fixed;}
+.messe_courshonneur{ background:url(../img/messe_courshonneur.jpg) no-repeat top center fixed;}
+.messe_interieur{ background:url(../img/messe_interieur.jpg) no-repeat top center fixed;}
+.cannonisation2papes{ background:url(../img/cannonisation2papes.jpg) no-repeat top center fixed;}
+.laCatho{ background:url(../img/laCatho.jpg) no-repeat top center fixed;}
+
+.glyphicon-croix_bdspi {background-image: url("../img/croix_bdspi.png"); background-position: 0 0; background-size: 24px 24px;height: 24px;width: 24px; &:before{content:""}}
+.glyphicon-i_bdspi {background-image: url("../img/i_bdspi.png"); background-position: 0 0; background-size: 24px 24px;height: 24px;width: 24px; &:before{content:""}}
+
+header{
+    background:url(../img/casa.jpg) no-repeat top center fixed;
+    @include background-size(cover);
+    .bg-cover{
+        position:absolute;
+        right:0;
+        left:0;
+        bottom:0;
+        z-index:1;
+        height:100%;
+
+        background-color:rgba(0, 5, 8, 0.75);
+    }
+}
+.header-content{
+    position:fixed;
+    right:0;
+    left:0;
+    top:20%;
+    z-index:2;
+
+    text-align:center;
+
+    color:#FFF;
+    h1{
+        padding-top: 20px;
+        letter-spacing:2px;
+
+        font-size:56px;
+    }
+    p{
+        line-height:1.5em;
+
+        font-size:18px;
+
+        padding:50px 100px;
+    }
+}
+
+.header-btns{
+    margin:10px 0;
+}
+.scroll-down{
+    position:absolute;
+    right:0;
+    left:0;
+    bottom:0;
+
+    text-align:center;
+
+
+}
+/**********************************
+************, NAVBAR **************
+**********************************/
+.navbar{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index:3;
+
+    @include transition-property(all);
+    @include transition-duration(0.8s);
+}
+
+.navbar{
+    height:60px;
+    line-height:60px;
+    
+    background:#222;
+    .navbar-logo,.navbar-menu{
+        display: block;
+    }
+}
+.navbar-logo{
+    float:left;
+    font-size: 24px;
+    color:#FFF;
+    text-decoration:none;
+    display: none;
+    img{
+        height:40px;
+        vertical-align:middle;
+    }
+    &:hover,&:active,&:focus{color: #fff;text-decoration:none;}
+}
+.navbar-menu{
+    overflow:hidden;
+    text-align:right;
+    a{
+        text-decoration:none;
+
+        text-transform:uppercase;
+        font-size:14px;
+
+        color:#FFF;
+        padding:0 15px;
+    }
+    .active{
+        color:$jaune;
+    }
+}
+
+/**********************************
+*******, STYLES GENERIQUES ********
+**********************************/
+.btn{
+    text-decoration:none;
+
+    @include border-radius(5px);
+
+    padding:10px 20px;
+    margin:0 10px;
+
+    @include transition-property(all);
+    @include transition-duration(0.8s);
+
+}
+.btn-transparent{
+    border:1px solid #FFF;
+    color:#FFF;
+    &:hover{
+        background:#FFF;
+        color:#000;
+    }
+}
+.btn-yellow{
+    background:#fec503;
+    color:#000;
+
+    border:1px solid #fec503;
+    &:hover{
+        background:transparent;
+        color:#FFF;
+    }
+}
+/* .container{
+    max-width:1170px;
+    margin:auto;
+} */
+
+.content{
+    position:absolute;
+    right:0;
+    left:0;
+}
+
+.navbar{
+    z-index: 100;
+    @include border-radius(0);
+}
+#cover{
+    z-index: 10;
+}
+#content{
+    padding-top: 60px;
+    z-index: 50;
+}
+.section .head-title{padding-top: 80px;margin-top: 0;}
+.section.noHeadTitle{padding-top: 80px;}
+
+.address{margin-bottom: 10px;}
+
+.section{padding-bottom: 80px;}
+.bleu{background-color: $bleu;color:#fff;}
+.bleu a{color:$orange;}
+.vert{background-color: $vert;color:#fff;}
+.jaune{background-color: $jaune;}
+.orange{background-color: $orange;color:#fff;}
+.rouge{background-color: $rouge;color:#fff;}
+
+/* FOOTER CONTENT
+-------------------------------------------------- */
+dl.dl-icons dt{width: 16px;}
+dl.dl-icons dd {margin-left: 30px;}
+
+footer{margin-top: 40px;color: #fff;background-color: $rouge;}
+
+footer a{color: #fff;}
+footer a:hover{color: #fff;}
+
+footer .divers{padding: 20px 0;}
+footer .partenaires{padding: 10px 0;border-top: 4px solid lighten($rouge, 20%);/*background-color: $vert;border-top: 4px solid lighten($vert, 5%);*/}
+
+  .partenaires .row{text-align: center;}
+  .partenaires .partenaire, .partenaires .nos_partenaires{display: inline-block;margin: 15px 20px;}
+footer .copyright{padding: 20px 0;font-size: 12px;background: none repeat scroll 0 0 #100e0f;border-top: 4px solid #2a2526;}
+  footer .copyright p{margin-bottom: 0;}
+/* -------------------------------------------------- */
