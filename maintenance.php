@@ -20,7 +20,7 @@ function getEvangileDuJourContent($type,$date=null,$lang="FR",$content="GSP"){
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="Page de Maintenance du site internet du BdSpi de l'Icam" name="description">
-    <meta content="IDiiL" name="author">
+    <meta content="Antoine Giraud 115" name="author">
     <link href="favicon.png" rel="shortcut icon">
 
     <title>Maintenance site internet BdSpi Icam</title>
