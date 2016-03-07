@@ -22,6 +22,7 @@ $rouge:#bb111e;
     text-shadow: 0 1px 3px rgba(0,0,0,.5);
     height: 600px;
 }
+.hopen{ background:url(../img/hopen.png) no-repeat top center fixed;}
 .entreeCouvent{ background:url(../img/casa.jpg) no-repeat top center fixed;}
 .viewCouvent{ background:url(../img/view_couvent.jpg) no-repeat top center fixed;}
 .aupieddeluniversite{ background:url(../img/aupieddeluniversite.jpg) no-repeat top center fixed;}
@@ -125,7 +126,7 @@ header{
     }
     &:hover,&:active,&:focus{color: #fff;text-decoration:none;}
 }
-.navbar-menu{
+.navbar-nav{
     overflow:hidden;
     text-align:right;
     a{
